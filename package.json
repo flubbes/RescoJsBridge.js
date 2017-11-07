@@ -2,7 +2,11 @@
   "name": "resco-jsbridge",
   "version": "10.2.1",
   "description": "",
-  "main": "index.js",
+  "main": "JSBridge.js",
+  "files": [
+    "JSBridge.js",
+    "JSBridge.js.min.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-gulpfile": "tsc gulpfile.ts",
