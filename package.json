@@ -1,11 +1,11 @@
 {
   "name": "resco-jsbridge",
-  "version": "10.2.2",
+  "version": "10.2.3",
   "description": "",
   "main": "JSBridge.js",
   "files": [
     "JSBridge.js",
-    "JSBridge.min.js","
+    "JSBridge.min.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
