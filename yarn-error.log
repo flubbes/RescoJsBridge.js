@@ -16,9 +16,13 @@ Platform:
 npm manifest: 
   {
     "name": "resco-jsbridge",
-    "version": "10.2.0",
+    "version": "10.2.2",
     "description": "",
-    "main": "index.js",
+    "main": "JSBridge.js",
+    "files": [
+      "JSBridge.js",
+      "JSBridge.min.js","
+    ],
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "build-gulpfile": "tsc gulpfile.ts",
@@ -1889,14 +1893,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/xtend/-/xtend-3.0.0.tgz#5cce7407baf642cba7becda568111c493f59665a"
 
 Trace: 
-  Error: https://registry.yarnpkg.com/resco-jsbridge: You cannot publish over the previously published version 10.2.0.
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:62098:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:123085:22)
-      at emitTwo (events.js:135:13)
-      at Request.emit (events.js:224:7)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:124068:10)
-      at emitOne (events.js:125:13)
-      at Request.emit (events.js:221:7)
-      at Gunzip.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:123988:12)
-      at Object.onceWrapper (events.js:322:30)
-      at emitNone (events.js:120:20)
+  SyntaxError: C:\GIT\RescoJsBridge.js\package.json: Unexpected token 
+   in JSON at position 154
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:770:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:92:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:103:13
+      at <anonymous>
