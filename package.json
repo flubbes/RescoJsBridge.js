@@ -6,7 +6,8 @@
   "repository": "https://github.com/flubbes/RescoJsBridge.js",
   "files": [
     "JSBridge.js",
-    "JSBridge.min.js"
+    "JSBridge.min.js",
+    "JSBridge.d.ts"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
