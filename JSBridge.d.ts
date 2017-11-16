@@ -119,7 +119,7 @@ declare namespace MobileCRM {
     }
 
     namespace Configuration {
-        function requestObject(callbackFn: CallBack<Configuration>, errorCallbackFn: CallBack<string>, scope: any): void;
+        function requestObject(callbackFn: CallBack<_Settings>, errorCallbackFn: CallBack<string>, scope: any): void;
     }
 
     interface Configuration {
@@ -143,6 +143,28 @@ declare namespace MobileCRM {
     namespace UI {
         namespace DetailViewItems {
 
+        }
+
+        interface Form {
+
+        }
+
+        namespace IFrameForm {
+            function onSave(handler: CallBack<IFrameForm>, bind: boolean, scope: any): void;
+            function preventClose(warningMessage: string | null): void;
+            function requestObject(callbackFn: CallBack<IFrameForm>, errorCallbackFn: CallBack<string>, scope: any): void;
+            function setDirty(): void;
+            function show(caption: string, url: string, maximized: boolean, options: any): void;
+            function showModal(caption: string, url: string, options: any): void;
+        }
+
+        interface IFrameForm {
+            form: Form;
+            isDirty: boolean;
+            options: any;
+            preventCloseMessage: string;
+            saveBehavior: number;
+            suspendSave(): any;
         }
     }
 
