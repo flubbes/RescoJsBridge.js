@@ -1,1 +1,1 @@
-{"symbols":{},"files":{"gulpfile.ts":"2017-11-07T12:48:19.821Z"}}
+{"symbols":{"RescoService":{"hasNamespace":false,"type":0,"moduleName":"resco-service","relativePath":"src\\resco-service"},"MobileCRM.Configuration":{"hasNamespace":true,"type":1,"moduleName":"JSBridge.d","relativePath":"JSBridge.d"}},"files":{"gulpfile.ts":"2017-11-07T12:48:19.821Z","JSBridge.d.ts":"2017-11-16T09:17:21.463Z","src\\resco-service.ts":"2017-11-16T09:16:26.152Z"}}
