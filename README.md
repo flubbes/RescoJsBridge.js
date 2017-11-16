@@ -10,4 +10,4 @@ The patch version number of this package is used for changes of the package. Maj
 
 ## Version example
 * Resco CRM Bridge version:   10.2
-* This packages version:       10.2.x
+* Version of this package:       10.2.x
