@@ -51,7 +51,26 @@ declare namespace MobileCRM {
     }
 
     interface CultureInfo {
-        
+        name: string;
+        displayName: string;
+        nativeName: string;
+        ISOName: string;
+        isRightToLeft: boolean;
+        dateTimeFormat:  DateTimeFormat;
+        numberFormat: NumberFormat;
+    }
+
+    namespace CultureInfo {
+        function formatDate(date: Date, format: string): string;
+        function fullDateTimeString(date: Date): string;
+        function initialize(callbackFn: CallBack<CultureInfo>, errorCallbackFn: CallBack<string>, scope: any): void;
+        function load(culture: string, callbackFn: CallBack<CultureInfo>, errorCallbackFn: CallBack<string>, scope: any): void;
+        function longDateString(date: Date): string;
+        function longTimeString(date: Date): string;
+        function monthDayString(date: Date): string;
+        function shortDateString(date: Date): string;
+        function shortTimeString(date: Date): string;
+        function yearMonthString(date: Date): string;
     }
     
     class DateTimeFormat {
