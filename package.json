@@ -14,7 +14,7 @@
     "build-gulpfile": "tsc gulpfile.ts",
     "update-jsbridge": "gulp update:jsbridge"
   },
-  "author": "Resco",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^8.0.53",
