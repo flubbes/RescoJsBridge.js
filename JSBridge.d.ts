@@ -138,7 +138,7 @@ declare namespace MobileCRM {
     }
 
     namespace Configuration {
-        function requestObject(callbackFn: CallBack<_Settings>, errorCallbackFn: CallBack<string>, scope: any): void;
+        function requestObject(callbackFn: CallBack<Configuration>, errorCallbackFn: CallBack<string>, scope: any): void;
     }
 
     interface Configuration {
