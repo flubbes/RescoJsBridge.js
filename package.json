@@ -1,27 +1,27 @@
 {
-  "name": "resco-jsbridge",
-  "version": "10.2.9",
-  "description": "",
-  "main": "JSBridge.js",
-  "repository": "https://github.com/flubbes/RescoJsBridge.js",
-  "files": [
-    "JSBridge.js",
-    "JSBridge.min.js",
-    "JSBridge.d.ts"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-gulpfile": "tsc gulpfile.ts",
-    "update-jsbridge": "gulp update:jsbridge"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^8.0.53",
-    "gulp": "^3.9.1",
-    "gulp-download": "^0.0.1",
-    "gulp-jsmin": "^0.1.5",
-    "gulp-rename": "^1.2.2",
-    "typescript": "^2.6.1"
-  }
+    "name": "resco-jsbridge",
+    "version": "10.2.9",
+    "description": "",
+    "main": "JSBridge.js",
+    "repository": "https://github.com/flubbes/RescoJsBridge.js",
+    "files": [
+        "JSBridge.js",
+        "JSBridge.min.js",
+        "index.d.ts"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-gulpfile": "tsc gulpfile.ts",
+        "update-jsbridge": "gulp update:jsbridge"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^8.0.53",
+        "gulp": "^3.9.1",
+        "gulp-download": "^0.0.1",
+        "gulp-jsmin": "^0.1.5",
+        "gulp-rename": "^1.2.2",
+        "typescript": "^2.6.1"
+    }
 }
