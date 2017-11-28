@@ -1,3 +1,5 @@
+
+
 declare namespace MobileCRM {
     let bridge: any;
 
