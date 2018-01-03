@@ -218,6 +218,23 @@ declare namespace MobileCRM {
             saveBehavior: number;
             suspendSave(): any;
         }
+
+        namespace FormManager {
+            function showNewDialog(entityName: string, relationShip?: Relationship | null, options?: any);
+        }
+
+        interface EntityForm {
+            associatedViews: Array<_EntityList>;
+        }
+
+        namespace EntityForm {
+            function requestObject(callback: CallBack<EntityForm>, errorMsg?: CallBack<string>, scope?: any);
+            function saveAndClose(): void;
+        }
+
+        interface _EntityList {
+            
+        }
     }
 
 
