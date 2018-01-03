@@ -3,6 +3,40 @@
 declare namespace MobileCRM {
     let bridge: any;
 
+    class Reference {
+        constructor(entityName: string, id: string, primaryName: string);
+
+        public entityName: string;
+        public id: string;
+        public isNew: boolean;
+        public primaryName: string;
+
+        public toString(): string;
+    }
+
+    namespace Reference {
+        function loadById(entityName: string, id: string, success: CallBack<Reference>, failed: CallBack<string>, scope: any): void;
+    }
+    
+
+    class DynamicEntity extends Reference {
+        constructor(entityName: string, id: string, primaryName: string, properties: PropertiesType, isOnline: boolean);
+
+        public isOnline: string;
+        public properties: PropertiesType;
+        public save(errorFn: CallBack<string | null>, forceMode?: boolean): void;
+    }
+
+    namespace DynamicEntity {
+        function createNew(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType): void;
+        function deleteById(entityName: string, id: string, successFn: () => void, failedFn: CallBack<string>, scope: any): void;
+        function downloadAttachment(entityName: string, id: string, successFn: CallBack<string>, failedFn: CallBack<string>, scope: any): void;
+        function loadById(entityName: string, id: string, successFn: CallBack<DynamicEntity>, failedFn: CallBack<string>, scope: any): void;
+        function loadDocumentBody(entityName: string, id: string, successFn: CallBack<string>, failedFn: CallBack<string>, scope: any): void;
+        function saveDocumentBody(entityId: string, entityName: string, relationShip: Relationship, filePath: string, mimeType: string, success: CallBack<Reference>, failed: CallBack<string>, scope: any): void;
+        function unzipDocumentBody(entityName: string, id: string, targetDir: string, success: CallBack<string>, failed: CallBack<string>, scope: any): void;
+    }
+
     interface AboutInfo {
         manufacturer: string;
         productTitle: string;
@@ -79,10 +113,6 @@ declare namespace MobileCRM {
 
     }
 
-    class DynamicEntity {
-
-    }
-
     class Localization {
 
     }
@@ -123,12 +153,13 @@ declare namespace MobileCRM {
 
     }
 
-    class Reference {
-
-    }
-
     class Relationship {
+        constructor(sourceProperty: string, target: Reference, intersectEntity: string, intersectProperty: string);
 
+        public sourceProperty: string;
+        public target: Reference;
+        public intersectEntity: string;
+        public intersectProperty: string;
     }
 
     class _DeviceInfo {
@@ -224,3 +255,4 @@ declare namespace MobileCRM {
 
 type CallBack<T> = (arg1: T) => void;
 type EmptyCallBack = () => void;
+type PropertiesType = { [key: string]: any; };
