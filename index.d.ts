@@ -20,7 +20,7 @@ declare namespace MobileCRM {
     
 
     class DynamicEntity extends Reference {
-        constructor(entityName: string, id: string, primaryName: string, properties: PropertiesType, isOnline: boolean);
+        constructor(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType, isOnline?: boolean);
 
         public isOnline: string;
         public properties: PropertiesType;
@@ -28,7 +28,7 @@ declare namespace MobileCRM {
     }
 
     namespace DynamicEntity {
-        function createNew(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType): void;
+        function createNew(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType): DynamicEntity;
         function deleteById(entityName: string, id: string, successFn: () => void, failedFn: CallBack<string>, scope: any): void;
         function downloadAttachment(entityName: string, id: string, successFn: CallBack<string>, failedFn: CallBack<string>, scope: any): void;
         function loadById(entityName: string, id: string, successFn: CallBack<DynamicEntity>, failedFn: CallBack<string>, scope: any): void;
