@@ -29,7 +29,7 @@ declare namespace MobileCRM {
 
     namespace DynamicEntity {
         function createNew(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType): DynamicEntity;
-        function deleteById(entityName: string, id: string, successFn: () => void, failedFn: CallBack<string>, scope: any): void;
+        function deleteById(entityName: string, id: string, successFn: () => void, failedFn: CallBack<string>, scope?: any): void;
         function downloadAttachment(entityName: string, id: string, successFn: CallBack<string>, failedFn: CallBack<string>, scope: any): void;
         function loadById(entityName: string, id: string, successFn: CallBack<DynamicEntity>, failedFn: CallBack<string>, scope: any): void;
         function loadDocumentBody(entityName: string, id: string, successFn: CallBack<string>, failedFn: CallBack<string>, scope: any): void;
@@ -154,7 +154,7 @@ declare namespace MobileCRM {
     }
 
     class Relationship {
-        constructor(sourceProperty: string, target: Reference, intersectEntity: string, intersectProperty: string);
+        constructor(sourceProperty: string, target: Reference, intersectEntity?: string, intersectProperty?: string);
 
         public sourceProperty: string;
         public target: Reference;
