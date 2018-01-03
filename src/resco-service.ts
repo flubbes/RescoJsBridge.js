@@ -2,7 +2,7 @@ export class RescoService {
     /**
      * MobileCRM.Configuration.requestObject
      */
-    public getConfiguration(): Promise<MobileCRM._Settings> {
+    public getConfiguration(): Promise<MobileCRM.Configuration> {
         return new Promise(
             (resolve, reject) => {
                 MobileCRM.Configuration.requestObject(
