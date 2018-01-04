@@ -236,10 +236,7 @@ declare namespace MobileCRM {
             isDirty: boolean;
             relationship: Relationship;
             visible: boolean;
-        }
-
-        namespace EntityForm {
-            function getDetailView(name: string): _DetailView;
+            getDetailView(name: string): _DetailView;
         }
 
         interface _DetailView {
