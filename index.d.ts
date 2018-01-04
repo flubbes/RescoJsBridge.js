@@ -17,7 +17,7 @@ declare namespace MobileCRM {
     namespace Reference {
         function loadById(entityName: string, id: string, success: CallBack<Reference>, failed: CallBack<string>, scope: any): void;
     }
-    
+
 
     class DynamicEntity extends Reference {
         constructor(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType, isOnline?: boolean);
@@ -49,7 +49,7 @@ declare namespace MobileCRM {
     }
 
     namespace AboutInfo {
-        function requestObject(callbackFn:  CallBack<AboutInfo>, errorCallbackFn: CallBack<string>): void;
+        function requestObject(callbackFn: CallBack<AboutInfo>, errorCallbackFn: CallBack<string>): void;
     }
 
     namespace Application {
@@ -78,9 +78,9 @@ declare namespace MobileCRM {
         public version: number;
         alert(callback: CallBack<any>, scope: any): void;
         closeForm(): void;
-        enableDebug(callback: CallBack<any>, errorCallback: CallBack<string>, scope: any): void;        
+        enableDebug(callback: CallBack<any>, errorCallback: CallBack<string>, scope: any): void;
         enableZoom(enable: boolean): void;
-        getWindowSize(callback: CallBack<{width: number, height: number}>, errorCallback: CallBack<string>, scope: any): void;     
+        getWindowSize(callback: CallBack<{ width: number, height: number }>, errorCallback: CallBack<string>, scope: any): void;
         log(text: string): void;
         onGlobalEvent(eventName: string, handler: CallBack<any>, bind: boolean, scope: any): void;
         raiseGlobalEvent(eventName: string, args: any): void;
@@ -92,7 +92,7 @@ declare namespace MobileCRM {
         nativeName: string;
         ISOName: string;
         isRightToLeft: boolean;
-        dateTimeFormat:  DateTimeFormat;
+        dateTimeFormat: DateTimeFormat;
         numberFormat: NumberFormat;
     }
 
@@ -108,7 +108,7 @@ declare namespace MobileCRM {
         function shortTimeString(date: Date): string;
         function yearMonthString(date: Date): string;
     }
-    
+
     class DateTimeFormat {
 
     }
@@ -225,6 +225,53 @@ declare namespace MobileCRM {
 
         interface EntityForm {
             associatedViews: Array<_EntityList>;
+            canEdit: boolean;
+            canClose: boolean;
+            context: OnChangeContext | OnSaveContext;
+            controllers: Array<_Controller>;
+            detailViews: Array<_DetailView>
+            entity: DynamicEntity;
+            form: Form;
+            iFrameOptions: any;
+            isDirty: boolean;
+            relationship: Relationship;
+            visible: boolean;
+        }
+
+        namespace EntityForm {
+            function getDetailView(name: string): _DetailView;
+        }
+
+        interface _DetailView {
+            isDirty: boolean;
+            isEnabled: boolean;
+            isVisible: boolean;
+            items: Array<_DetailItem>;
+            name: string;
+            getItemByName(name: string): _DetailItem;
+        }
+
+        interface _DetailItem {
+
+        }
+
+        interface _Controller {
+            isDirty: boolean;
+            isLoaded: boolean;
+            view: _View;
+        }
+
+        interface _View {
+            isVisible: boolean; 
+            name: string;
+        }
+
+        interface OnChangeContext {
+            changedItem: string;
+        }
+
+        interface OnSaveContext {
+            errorMessage: string;
         }
 
         namespace EntityForm {
@@ -233,7 +280,7 @@ declare namespace MobileCRM {
         }
 
         interface _EntityList {
-            
+
         }
     }
 
