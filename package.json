@@ -1,6 +1,6 @@
 {
     "name": "resco-jsbridge",
-    "version": "10.3.5",
+    "version": "10.3.6",
     "description": "",
     "main": "JSBridge.js",
     "repository": "https://github.com/flubbes/RescoJsBridge.js",
