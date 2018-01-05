@@ -4,7 +4,7 @@ declare namespace MobileCRM {
     let bridge: any;
 
     class Reference {
-        constructor(entityName: string, id: string, primaryName: string);
+        constructor(entityName: string, id: string, primaryName?: string);
 
         public entityName: string;
         public id: string;
