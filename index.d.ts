@@ -198,7 +198,13 @@ declare namespace MobileCRM {
         }
 
         interface Form {
-
+            canMaximize: boolean;
+            isMaximized: boolean;
+            caption: string;
+            selectedViewIndex: number;
+            showTitle: boolean;
+            viewCount: number;
+            visible: boolean;
         }
 
         namespace IFrameForm {
@@ -227,7 +233,7 @@ declare namespace MobileCRM {
             associatedViews: Array<_EntityList>;
             canEdit: boolean;
             canClose: boolean;
-            context: OnChangeContext | OnSaveContext;
+            context: Context;
             controllers: Array<_Controller>;
             detailViews: Array<_DetailView>
             entity: DynamicEntity;
@@ -249,7 +255,30 @@ declare namespace MobileCRM {
         }
 
         interface _DetailItem {
-
+            dataMember: string;
+            errorMessage: string;
+            isEnabled: boolean;
+            isNullable: boolean;
+            isVisible: boolean;
+            label: string;
+            name: string;
+            validate: boolean;
+            isPassword: boolean;
+            kind: number;
+            maxLength: number;
+            numberOfLines: number;
+            value: any; // string | number | boolean | Date | Reference
+            decimalPlaces: number;
+            displayFormat: string;
+            increment: number;
+            maximum: number;
+            minimum: number;
+            upDownVisible: boolean;
+            textChecked: string;
+            textUnchecked: string;
+            parts: number;
+            valueMember: string;
+            isMultiline: boolean;
         }
 
         interface _Controller {
@@ -263,17 +292,15 @@ declare namespace MobileCRM {
             name: string;
         }
 
-        interface OnChangeContext {
-            changedItem: string;
-        }
-
-        interface OnSaveContext {
-            errorMessage: string;
+        interface Context {
+            changedItem?: string;
+            errorMessage?: string;
         }
 
         namespace EntityForm {
             function requestObject(callback: CallBack<EntityForm>, errorMsg?: CallBack<string>, scope?: any);
             function saveAndClose(): void;
+            function onSave(hander: (entityForm: EntityForm) => boolean, bind: boolean, scope: any);
         }
 
         interface _EntityList {
