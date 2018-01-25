@@ -22,7 +22,7 @@ declare namespace MobileCRM {
     class DynamicEntity extends Reference {
         constructor(entityName: string, id?: string, primaryName?: string, properties?: PropertiesType, isOnline?: boolean);
 
-        public isOnline: string;
+        public isOnline: boolean;
         public properties: PropertiesType;
         public save(errorFn: CallBack<string | null>, forceMode?: boolean): void;
     }
