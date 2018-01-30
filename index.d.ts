@@ -113,8 +113,8 @@ declare namespace MobileCRM {
 
     }
 
-    class Localization {
-
+    namespace Localization {
+        function getLoadedLangId(successFn: CallBack<string>, errorFn: CallBack<string>, scope: any): void;
     }
 
     class ManyToManyReference {
