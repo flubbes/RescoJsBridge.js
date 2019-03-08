@@ -2,9 +2,10 @@
 
 The typings for the Resco JsBridge of this package is unfinished, but you can use it as a base version.
 
-Downloaded from here "https://www.resco.net/downloads/JSBridge.js"
+Downloaded from here "https://www.resco.net/downloads/JSBridge.js".
 
-All rights to Resco.net, Inc.
+
+All rights of the JSBridge to Resco.net, Inc.
 
 Versions of this package correlate in parts with versions of the Resco CRM Bridge.
 
