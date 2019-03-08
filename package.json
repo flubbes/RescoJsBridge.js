@@ -11,7 +11,6 @@
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build-gulpfile": "tsc gulpfile.ts",
         "update-jsbridge": "gulp update:jsbridge"
     },
     "author": "",
@@ -21,7 +20,7 @@
         "gulp": "^4.0.0",
         "gulp-download": "^0.0.1",
         "gulp-jsmin": "^0.1.5",
-        "gulp-rename": "^1.4.0",
+        "gulp-rename": "^1.2.2",
         "typescript": "^3.3.3333"
     }
 }
